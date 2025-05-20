@@ -7,5 +7,20 @@ function getComputerChoice(){
         return "scissors"
     }
 }
+console.log("Computer choice: " + getComputerChoice());
 
-console.log(getComputerChoice());
+function getHumanChoice(){
+    let humanChoice = prompt("What will you play?").toLowerCase();
+    console.log("Human choice: " + humanChoice);
+    if (humanChoice === "rock") {
+        return humanChoice
+    } else if (humanChoice === "paper") {
+        return  humanChoice
+    } else if (humanChoice === "scissors") {
+        return humanChoice
+    } else {
+        console.log("Invalid choice");
+        getHumanChoice();
+    }
+}
+console.log(getHumanChoice());
